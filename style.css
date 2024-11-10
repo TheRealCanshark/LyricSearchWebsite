@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 改成從上方對齊，避免蓋住內容 */
+    height: 100vh; /* 使容器占滿整個視窗高度 */
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5; /* 可選，增加背景顏色 */
+    overflow: auto; /* 加入捲動條，防止內容超出視窗時被遮擋 */
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 20px;
+}
+
+input, button {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#lyricsResult {
+    margin-top: 20px;
+    white-space: pre-wrap;
+    color: #333;
+    text-align: center; /* 使歌詞居中顯示 */
+    max-width: 90%; /* 限制最大寬度 */
+    word-wrap: break-word; /* 長字自動換行 */
+    max-height: 50vh; /* 限制最大高度，避免歌詞過多時蓋住其他內容 */
+    overflow-y: auto; /* 允許歌詞區塊有垂直捲軸，顯示更多歌詞 */
+}
+
+button {
+    margin-top: 10px;
+}

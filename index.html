@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌詞搜尋</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>歌詞搜尋</h1>
+    <form id="lyricsForm">
+        <input type="text" id="song" placeholder="歌曲名稱">
+        <input type="text" id="artist" placeholder="歌手名稱">
+        <button type="submit">搜尋</button>
+    </form>
+    
+    <div id="lyricsResult"></div>
+    <div id="buttons" style="display: none;">
+        <button id="showLyricsBtn">顯示歌詞</button>
+        <button id="showVideoBtn">在YouTube上觀看</button>
+    </div>
+
+    <!-- 歌詞結果區 -->
+    <div id="lyricsResult" style="display: none;"></div>
+    <!-- 影片嵌入區 -->
+    <div id="videoResult" style="display: none;"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
