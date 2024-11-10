@@ -81,3 +81,27 @@ document.getElementById('showVideoBtn').addEventListener('click', async function
         }
     }
 });
+
+document.getElementById('reportForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const formData = new FormData();
+    formData.append('name', document.getElementById('name').value);
+    formData.append('content', document.getElementById('content').value);
+    const fileInput = document.getElementById('file').files[0];
+    if (fileInput) {
+        formData.append('file', fileInput);
+    }
+
+    try {
+        const response = await fetch('/submit-report', {
+            method: 'POST',
+            body: formData
+        });
+        const result = await response.json();
+        document.getElementById('responseMessage').textContent = result.message;
+    } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('responseMessage').textContent = '提交失敗，請稍後再試。';
+    }
+});
